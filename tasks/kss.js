@@ -1,6 +1,6 @@
 /*
  * grunt-kss
- * https://github.com/A12930/grunt-kss
+ * https://github.com/t32k/grunt-kss
  *
  * Copyright (c) 2013 Koji Ishimoto
  * Licensed under the MIT license.
@@ -10,41 +10,42 @@
 
 module.exports = function(grunt) {
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+  var exec = require('child_process').exec;
+
 
   grunt.registerMultiTask('kss', 'Your task description goes here.', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
+
+    var done = this.async();
+
+    var src, dest;
+
     var options = this.options({
-      punctuation: '.',
-      separator: ', '
+      template: null,
+      include: null,
+      mask: null,
+      init: null
     });
 
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
-        }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
+    function puts (error, stdout, stderr) {
+      if (error !== null) {
+        grunt.log.error(stderr);
+      } else {
+        grunt.log.write(stdout);
+      }
+      done();
+    }
 
-      // Handle options.
-      src += options.punctuation;
+    this.files.forEach(function(file) {
 
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
+      src = file.src[0];
+      dest = file.dest;
 
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
     });
+
+    exec('kss-node '+ src + ' ' + dest + ' --sass test/fixtures/button.scss', puts);
+
+
   });
 
 };
+
