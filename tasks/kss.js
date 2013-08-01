@@ -10,7 +10,6 @@
 
 module.exports = function(grunt) {
 
-
   grunt.registerMultiTask('kss', 'Your task description goes here.', function() {
 
     var done = this.async();
@@ -56,5 +55,4 @@ module.exports = function(grunt) {
     grunt.verbose.ok('`kss-node ' + command.args.join(' ') + '` was initiated.');
 
   });
-
 };
