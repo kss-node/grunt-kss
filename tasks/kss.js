@@ -12,15 +12,10 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('kss', 'Your task description goes here.', function() {
 
-    var path = require('path'),
-        fs = require('fs'),
-        done = this.async();
+    var done = this.async();
 
     var kssArgs = [],
-        realPath = path.dirname(fs.realpathSync(__filename)) + '/../node_modules/kss/bin/kss-node',
-        command = { cmd: realPath, args: kssArgs };
-
-    grunt.log.ok(realPath);
+        command = { cmd: 'kss-node', args: kssArgs };
 
     var opts = this.options({
       template: null,
