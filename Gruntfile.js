@@ -32,10 +32,12 @@ module.exports = function(grunt) {
     kss: {
       default_options: {
         options: {
+          includeType: 'css',
+          includePath: 'test/fixtures/button.css'
         },
         files: {
-          // dest/src
-          'test/tmp/': ['test/fixtures/'],
+          // dest : src
+          'test/tmp/': ['test/fixtures/']
         },
       }
     },

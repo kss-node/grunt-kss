@@ -10,42 +10,51 @@
 
 module.exports = function(grunt) {
 
-  var exec = require('child_process').exec;
-
 
   grunt.registerMultiTask('kss', 'Your task description goes here.', function() {
 
     var done = this.async();
 
-    var src, dest;
+    var kssArgs = [],
+        command = { cmd: 'node_modules/kss/bin/kss-node', args: kssArgs };
 
-    var options = this.options({
+    var opts = this.options({
       template: null,
-      include: null,
-      mask: null,
-      init: null
+      includeType: null,
+      includePath: null,
+      mask: null
     });
-
-    function puts (error, stdout, stderr) {
-      if (error !== null) {
-        grunt.log.error(stderr);
-      } else {
-        grunt.log.write(stdout);
-      }
-      done();
-    }
 
     this.files.forEach(function(file) {
-
-      src = file.src[0];
-      dest = file.dest;
-
+      kssArgs.push(file.src[0]);
+      kssArgs.push(file.dest);
     });
 
-    exec('kss-node '+ src + ' ' + dest + ' --sass test/fixtures/button.scss', puts);
+    if (opts.template !== null) {
+      kssArgs.push('--template', opts.template);
+    }
 
+    if (opts.mask !== null) {
+      kssArgs.push('--mask', opts.mask);
+    }
+
+    if (opts.includeType !== null && opts.includePath !== null ) {
+      kssArgs.push('--' + opts.includeType, opts.includePath);
+    } 
+
+    var putInfo = function (error, result, code) {
+      if (error !== null) {
+        grunt.log.error(error);
+        grunt.log.error('Code: ' + code);
+      } else {
+        grunt.log.write(result);
+      }
+      done();
+    };
+    
+    grunt.util.spawn(command, putInfo);
+    grunt.verbose.ok('`kss-node ' + command.args.join(' ') + '` was initiated.');
 
   });
 
 };
-

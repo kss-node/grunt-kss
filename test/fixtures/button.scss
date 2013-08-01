@@ -2,12 +2,16 @@
 //
 // Buttons can and should be clicked.
 //
-// Markup: <button class="button {$modifiers}">
+// Markup: <a href="#" class="button {$modifiers}">This is Button!</a>
 //
+// .button-big - Highlight the button when hovered.
 // :hover - Highlight the button when hovered.
 //
-// Styleguide 1.1
+// Styleguide 1.0
 
 .button {
 	background: black;
+}
+.button-big {
+	font-size: 24px;
 }
