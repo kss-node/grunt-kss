@@ -30,15 +30,15 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     kss: {
-      default_options: {
-        options: {
-          includeType: 'css',
-          includePath: 'test/fixtures/button.css'
-        },
+      options: {
+        includeType: 'css',
+        includePath: 'test/fixtures/button.css'
+      },
+      dist: {
         files: {
           // dest : src
           'test/tmp/': ['test/fixtures/']
-        },
+        }
       }
     },
 
