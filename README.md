@@ -1,4 +1,4 @@
-# grunt-kss [![Build Status](https://secure.travis-ci.org/t32k/grunt-kss.png?branch=master)](http://travis-ci.org/t32k/grunt-kss)
+# grunt-kss [![Build Status](https://secure.travis-ci.org/t32k/grunt-kss.png?branch=master)](http://travis-ci.org/t32k/grunt-kss) [![NPM version](https://badge.fury.io/js/grunt-kss.png)](http://badge.fury.io/js/grunt-kss)
 
 > KSS styleguide generator for grunt.
 
