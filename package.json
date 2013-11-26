@@ -1,7 +1,7 @@
 {
   "name": "grunt-kss",
   "description": "KSS styleguide generator for grunt.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/t32k/grunt-kss",
   "author": {
     "name": "Koji Ishimoto",

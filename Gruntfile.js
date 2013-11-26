@@ -1,6 +1,6 @@
 /*
  * grunt-kss
- * https://github.com/A12930/grunt-kss
+ * https://github.com/t32k/grunt-kss
  *
  * Copyright (c) 2013 Koji Ishimoto
  * Licensed under the MIT license.
