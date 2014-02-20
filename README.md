@@ -77,6 +77,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
++ v0.2.5: Fix "Error: spawn ENOENT" bug for Windows
 + v0.2.4: Fix kss-node module path.
 + v0.2.3: Bump version.
 + v0.2.2: Fix README.
