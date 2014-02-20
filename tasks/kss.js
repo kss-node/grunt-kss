@@ -10,15 +10,16 @@
 
 module.exports = function(grunt) {
 
-  grunt.registerMultiTask('kss', 'Your task description goes here.', function() {
+  grunt.registerMultiTask('kss', 'Generate styleguide by KSS.', function() {
 
-    var path = require('path'),
-        fs = require('fs'),
+    var fs = require('fs'),
+        path = require('path'),
+        exec = require('child_process').exec,
         done = this.async();
 
     var kssArgs = [],
-        realPath = path.dirname(fs.realpathSync(__filename)) + '/../node_modules/kss/bin/kss-node',
-        command = { cmd: realPath, args: kssArgs };
+        realPath = path.dirname(fs.realpathSync(__filename)).replace(/\/tasks/g, '') + '/node_modules/kss/bin/kss-node';
+        //command = { cmd: realPath, args: kssArgs };
 
     var opts = this.options({
       template: null,
@@ -54,8 +55,9 @@ module.exports = function(grunt) {
       done();
     };
     
-    grunt.util.spawn(command, putInfo);
-    grunt.verbose.ok('`kss-node ' + command.args.join(' ') + '` was initiated.');
+    console.log(realPath);
+    exec('node ' + realPath + ' ' + kssArgs.join(' '), putInfo);
+    //grunt.verbose.ok('`kss-node ' + command.args.join(' ') + '` was initiated.');
 
   });
 };
