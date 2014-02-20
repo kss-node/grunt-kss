@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             done = this.async();
 
         var kssCmd = ['node'],
-            realPath = path.dirname(fs.realpathSync(__filename));
+            realPath = path.dirname(__filename).replace(/tasks$/g, '');
 
         var opts = this.options({
             template: null,
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
             mask: null
         });
 
-        kssCmd.push(realPath.replace(/\/tasks/g, '') + '/node_modules/kss/bin/kss-node');
+        kssCmd.push(realPath + 'node_modules/kss/bin/kss-node');
 
         this.files.forEach(function(file) {
             kssCmd.push(file.src[0]);
