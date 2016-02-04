@@ -27,7 +27,7 @@ exports.kss = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
+  defaultOptions: function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('test/output/section-1.html');

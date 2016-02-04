@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['test/output/'],
+      tests: ['test/output/']
     },
 
     // Configuration to be run (and then tested).
@@ -23,9 +23,8 @@ module.exports = function(grunt) {
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js'],
-    },
-
+      tests: ['test/*_test.js']
+    }
   });
 
   // Actually load this plugin's task(s).
@@ -41,5 +40,4 @@ module.exports = function(grunt) {
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test']);
-
 };
