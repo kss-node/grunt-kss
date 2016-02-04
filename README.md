@@ -33,10 +33,9 @@ grunt.initConfig({
       includePath: '/path/to/include.css',
     },
     dist: {
-	    files: {
-	      '/path/to/destdir': ['/path/to/sourcedir']
-	    }
-  	}
+      src: ['/path/to/sourcedir'],
+      dest: '/path/to/destdir'
+    }
   }
 })
 ```
