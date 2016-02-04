@@ -1,42 +1,42 @@
 {
-    "name": "grunt-kss",
-    "description": "KSS styleguide generator for grunt.",
-    "version": "0.2.6",
-    "homepage": "https://github.com/kss-node/grunt-kss",
-    "author": "Koji Ishimoto <ijok.ijok@gmail.com> (http://t32k.me/)",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/kss-node/grunt-kss.git"
-    },
-    "bugs": {
-        "url": "https://github.com/kss-node/grunt-kss/issues"
-    },
-    "license": "(MIT OR GPL-2.0)",
-    "main": "Gruntfile.js",
-    "engines": {
-        "node": ">= 0.10.0"
-    },
-    "scripts": {
-        "test": "grunt test",
-        "posttest": "eslint ."
-    },
-    "dependencies": {
-        "kss": "~0.3.6"
-    },
-    "devDependencies": {
-        "eslint": "^1.10.3",
-        "grunt-contrib-clean": "~0.5.0",
-        "grunt-contrib-nodeunit": "~0.3.1",
-        "grunt-cli": "~0.1.13",
-        "grunt": "~0.4.2"
-    },
-    "peerDependencies": {
-        "grunt": "~0.4.2"
-    },
-    "keywords": [
-        "gruntplugin",
-        "styleguide",
-        "kss-node",
-        "css"
-    ]
+  "name": "grunt-kss",
+  "description": "KSS styleguide generator for grunt.",
+  "version": "0.2.6",
+  "homepage": "https://github.com/kss-node/grunt-kss",
+  "author": "Koji Ishimoto <ijok.ijok@gmail.com> (http://t32k.me/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kss-node/grunt-kss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kss-node/grunt-kss/issues"
+  },
+  "license": "(MIT OR GPL-2.0)",
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "posttest": "eslint ."
+  },
+  "dependencies": {
+    "kss": "~0.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-nodeunit": "~0.3.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "styleguide",
+    "kss-node",
+    "css"
+  ]
 }
