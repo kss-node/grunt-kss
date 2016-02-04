@@ -30,7 +30,7 @@ exports.kss = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('test/tmp/section-1.html');
+    var actual = grunt.file.read('test/output/section-1.html');
     var expected = grunt.file.read('test/expected/section-1.html');
     test.equal(actual, expected, 'should describe what the default behavior is.');
 

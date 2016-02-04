@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['test/tmp/'],
+      tests: ['test/output/'],
     },
 
     // Configuration to be run (and then tested).
@@ -24,10 +24,8 @@ module.exports = function(grunt) {
         includePath: 'test/fixtures/button.css'
       },
       dist: {
-        files: {
-          // dest : src
-          'test/tmp/': ['test/fixtures/']
-        }
+        src: ['test/fixtures/'],
+        dest: 'test/output/'
       }
     },
 

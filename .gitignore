@@ -1,6 +1,6 @@
 # Exclude stuff specific to this project.
 node_modules
-/test/tmp
+/test/output
 coverage
 npm-debug.log
 

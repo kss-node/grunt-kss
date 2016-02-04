@@ -2,7 +2,7 @@
 **/node_modules/**
 
 # Ignore old test runs.
-test/tmp/**
+test/output/**
 
 # Ignore test coverage reports
 coverage/**
