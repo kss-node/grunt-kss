@@ -1,11 +1,3 @@
-/*
- * grunt-kss
- * https://github.com/kss-node/grunt-kss
- *
- * Copyright (c) 2013 Koji Ishimoto
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 module.exports = function(grunt) {
