@@ -2,8 +2,6 @@
 
 [![Build Status](https://secure.travis-ci.org/kss-node/grunt-kss.png?branch=master)](http://travis-ci.org/kss-node/grunt-kss)
 [![NPM version](https://badge.fury.io/js/grunt-kss.png)](http://badge.fury.io/js/grunt-kss)
-[![Dependency Status](https://david-dm.org/kss-node/grunt-kss.png)](https://david-dm.org/kss-node/grunt-kss)
-[![devDependency Status](https://david-dm.org/kss-node/grunt-kss/dev-status.png)](https://david-dm.org/kss-node/grunt-kss#info=devDependencies)
 
 > KSS styleguide generator for grunt.
 
