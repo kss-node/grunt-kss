@@ -1,25 +1,31 @@
 {
   "name": "grunt-kss",
-  "description": "KSS styleguide generator for grunt.",
   "version": "0.2.6",
+  "description": "KSS style guide generator for grunt.",
   "homepage": "https://github.com/kss-node/grunt-kss",
-  "author": "Koji Ishimoto <ijok.ijok@gmail.com> (http://t32k.me/)",
+  "bugs": {
+    "url": "https://github.com/kss-node/grunt-kss/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/kss-node/grunt-kss.git"
   },
-  "bugs": {
-    "url": "https://github.com/kss-node/grunt-kss/issues"
-  },
-  "license": "(MIT OR GPL-2.0)",
+  "author": "Koji Ishimoto <ijok.ijok@gmail.com> (http://t32k.me/)",
+  "keywords": [
+    "gruntplugin",
+    "styleguide",
+    "kss",
+    "kss-node"
+  ],
   "main": "Gruntfile.js",
-  "engines": {
-    "node": ">= 0.10.0"
+  "directories": {
+    "test": "test"
   },
   "scripts": {
     "test": "grunt test",
     "posttest": "eslint ."
   },
+  "license": "(MIT OR GPL-2.0)",
   "dependencies": {
     "kss": "~0.3.6"
   },
@@ -33,10 +39,7 @@
   "peerDependencies": {
     "grunt": "~0.4.2"
   },
-  "keywords": [
-    "gruntplugin",
-    "styleguide",
-    "kss-node",
-    "css"
-  ]
+  "engines": {
+    "node": ">= 0.10.0"
+  }
 }
