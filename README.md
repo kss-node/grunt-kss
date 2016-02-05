@@ -3,10 +3,10 @@
 [![Build Status](https://secure.travis-ci.org/kss-node/grunt-kss.png?branch=master)](http://travis-ci.org/kss-node/grunt-kss)
 [![NPM version](https://badge.fury.io/js/grunt-kss.png)](http://badge.fury.io/js/grunt-kss)
 
-> KSS styleguide generator for grunt.
+> KSS style guide generator for grunt.
 
 ## Getting Started
-This plugin requires Grunt `~0.4.2`
+This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -25,12 +25,13 @@ grunt.loadNpmTasks('grunt-kss');
 ### Overview
 In your project's Gruntfile, add a section named `kss` to the data object passed into `grunt.initConfig()`.
 
+Here's an example:
+
 ```js
 grunt.initConfig({
   kss: {
     options: {
-      includeType: 'css',
-      includePath: '/path/to/include.css',
+      verbose: true
     },
     dist: {
       src: ['/path/to/sourcedir'],
@@ -42,38 +43,55 @@ grunt.initConfig({
 
 ### Options
 
-#### options.includeType
-Type: `String`
-Default value: `null`
-
-`style, less, stylus, sass, css`
-
-A string value that is used to compile and include to build your style.
-
-#### options.includePath
-Type: `String`
-Default value: `null`
-
-A string value that is used to specify incluede stylesheet path.
-
 #### options.template
 Type: `String`
 Default value: `null`
 
-A string value that is used to use a custom template to build your styleguide.
+Use a custom template to build your style guide.
+
+#### options.helpers
+Type: `String` or array of `String`
+Default value: `null`
+
+Specify location(s) of custom handlebars helpers; see
+http://bit.ly/kss-helpers
 
 #### options.mask
 Type: `String`
 Default value: `null`
 
-A string value that is used to use a custom mask for detecting stylesheets.
+Use a custom mask for detecting stylesheets.
 
+#### options.custom
+Type: `String` or array of `String`
+Default value: `null`
+
+Use custom property name(s) when parsing KSS comments.
+
+#### options.css
+Type: `String` or array of `String`
+Default value: `null`
+
+Adds CSS stylesheet(s) to your style guide.
+
+#### options.js
+Type: `String` or array of `String`
+Default value: `null`
+
+Adds JavaScript file(s) to your style guide.
+
+#### options.config
+Type: `String`
+Default value: `null`
+
+Loads the kss-node configuration from a JSON file.
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
++ v1.0.0: Update to KSS 2.4.0.
 + v0.2.6: Fix "Error: spawn ENOENT" bug for Windows
 + v0.2.4: Fix kss-node module path.
 + v0.2.3: Bump version.
