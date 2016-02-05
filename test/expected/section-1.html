@@ -1,118 +1,115 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <title>KSS Style Guide</title>
 
-  <title>KSS: Living Styleguide</title>
   <meta name="description" content="">
-  <meta name="generator" content="kss-node" />
-
+  <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/style.css">
-
+  
 </head>
-<body><div id="kss-wrapper">
-  <div id="kss-nav">
-    <header id="kss-header">
-      <hgroup><h1>kss-node Styleguide</h1></hgroup>
-    </header>
-    <aside>
-      <nav><ul>
-        <li><a href="index.html">0.0: Overview</a></li>
-        
-          <li><a href="section-1.html">1.0: Buttons</a></li>
-        
-      </ul></nav>
-    </aside>
-  </div>
-  <div role="main" id="kss-main">
-    <article id="kss-content">
-      
+<body id="kss-node">
 
-        
-        
-          
-            <h1 class="kss-title"><span class="kss-ref">1.0</span> - Buttons</h1>
-          
-            
-                <div class="kss-box"><p>Buttons can and should be clicked.</p>
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-1.html">
+          <span class="kss-nav__ref">1</span
+          ><span class="kss-nav__name">Buttons</span>
+        </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
+      </li>
+    </ul>
+  </nav>
 </div>
-                <table class="kss-mod-list">
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Default styling</p></td>
-                    <td class="kss-mod-name"></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button {$modifiers}">This is Button!</a></td>
-                  </tr>
-                
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Highlight the button when hovered.</p>
-</td>
-                    <td class="kss-mod-name"><p>.button-big</p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button button-big">This is Button!</a></td>
-                  </tr>
-                
-                  <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>Highlight the button when hovered.</p>
-</td>
-                    <td class="kss-mod-name"><p>:hover</p></td>
-                  </tr>
-                  <tr class="kss-mod-example">
-                    <td colspan="2"><a href="#" class="button pseudo-class-hover">This is Button!</a></td>
-                  </tr>
-                
-                </table>
-                <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;This is Button!&lt;/a&gt;</pre>
-                </div>
-            
-           
-        
-      
-    </article>
-  </div>
-  <footer>
-    
-  </footer>
-  <!-- SCRIPTS -->
-  <script src="public/kss.js"></script>
-  <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      var sidebarAdjust = function() {
-        // Match footer/body height
-        var height = Math.max($(window).height(), $('#kss-main').height());
+<article role="main" class="kss-main">
 
-        if ($(window).width() <= 768) {
-          $('#kss-main, #kss-nav').height('auto');
-        } else {
-          $('#kss-main, #kss-nav').height(height);
-        }
-      };
+      <div     id="kssref-1" class="kss-section kss-section--depth-1">
 
-      $(window).resize(sidebarAdjust);
-      $(window).scroll(sidebarAdjust);
-      sidebarAdjust();
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-1">
+          <span class="kss-title__ref">
+              1
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Buttons
+        </a>
+      </h1>
 
-      // Ensure code blocks are highlighted properly...
-      $('pre>code').addClass('prettyprint');
-      prettyPrint();
 
-    });
-  </script>
+      <div class="kss-description">
+        <p>Buttons can and should be clicked.</p>
 
-  
-  
-</div></body>
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <a href="#" class="button {$modifiers}">This is Button!</a>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .button-big
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlight the button when hovered.
+        </div>
+        <div class="kss-modifier__example">
+          <a href="#" class="button {$modifiers}">This is Button!</a>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          :hover
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlight the button when hovered.
+        </div>
+        <div class="kss-modifier__example">
+          <a href="#" class="button {$modifiers}">This is Button!</a>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;button {$modifiers}&quot;&gt;This is Button!&lt;/a&gt;</code></pre>
+      </div>
+
+      </div>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
 </html>

@@ -1,53 +1,29 @@
 'use strict';
 
-var path = require('path'),
-  exec = require('child_process').exec;
+var kss = require('kss');
 
 module.exports = function(grunt) {
   grunt.registerMultiTask('kss', 'Generate style guide with KSS.', function() {
 
-    var done = this.async(),
-      kssCmd = ['node'],
-      realPath = path.dirname(__filename).replace(/tasks$/g, '');
+    var done = this.async();
 
-    var opts = this.options({
-      template: null,
-      includeType: null,
-      includePath: null,
-      mask: null
-    });
+    var options = this.options({});
 
-    kssCmd.push(realPath + 'node_modules/kss/bin/kss-node');
-
+    // Add source and destination from Grunt.
+    options.source = [];
     this.files.forEach(function(file) {
-      kssCmd.push(file.src[0]);
-      kssCmd.push(file.dest);
+      options.destination = file.dest;
+      for (var i = 0; i < file.src.length; i++) {
+        options.source.push(file.src[i]);
+      }
     });
 
-    if (opts.template !== null) {
-      kssCmd.push('--template', opts.template);
-    }
-
-    if (opts.mask !== null) {
-      kssCmd.push('--mask', opts.mask);
-    }
-
-    if (opts.includeType !== null && opts.includePath !== null) {
-      kssCmd.push('--' + opts.includeType, opts.includePath);
-    }
-
-    var putInfo = function(error, result, code) {
-      if (error !== null) {
+    // Call kss() to generate the style guide.
+    kss(options, function(error) {
+      if (error) {
         grunt.log.error(error);
-        grunt.log.error('Code: ' + code);
-      } else {
-        grunt.log.write(result);
       }
       done();
-    };
-
-    // Execute!!
-    exec(kssCmd.join(' '), putInfo);
-    grunt.verbose.ok('`[KSS] ' + kssCmd.join(' ') + '` was initiated.');
+    });
   });
 };
