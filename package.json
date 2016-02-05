@@ -1,6 +1,6 @@
 {
   "name": "grunt-kss",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "KSS style guide generator for grunt.",
   "homepage": "https://github.com/kss-node/grunt-kss",
   "bugs": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git://github.com/kss-node/grunt-kss.git"
   },
-  "author": "Koji Ishimoto <ijok.ijok@gmail.com> (http://t32k.me/)",
+  "author": "John Albin Wilkins <virtually.johnalbin@gmail.com> (http://john.albin.net/)",
   "keywords": [
     "gruntplugin",
     "styleguide",
