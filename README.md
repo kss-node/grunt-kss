@@ -91,7 +91,7 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 
 ## Release History
 
-+ v5.0.0: Update to KSS 3.0.0 and Node.js 4.0.0 or later.
++ v5.0.0: Update to KSS 3.0.0, Grunt 1.0.0, and Node.js 4.0.0 or later.
 + v4.0.0: Update to KSS 2.4.0.
 + v1.0.0: [Don't ask.](https://github.com/kss-node/grunt-kss/issues/6#issuecomment-206684950)
 + v0.2.6: Fix "Error: spawn ENOENT" bug for Windows.
