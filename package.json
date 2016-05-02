@@ -27,7 +27,7 @@
   },
   "license": "(MIT OR GPL-2.0)",
   "dependencies": {
-    "kss": "~2.4.0"
+    "kss": "~3.0.0-beta.5"
   },
   "devDependencies": {
     "eslint": "^2.9.0",
@@ -40,6 +40,6 @@
     "grunt": ">=0.4.0"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 4.0.0"
   }
 }
