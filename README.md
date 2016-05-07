@@ -43,7 +43,7 @@ grunt.initConfig({
 
 ### Options
 
-#### options.template
+#### options.builder
 Type: `String`
 Default value: `null`
 
