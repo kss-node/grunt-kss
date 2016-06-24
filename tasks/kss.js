@@ -25,5 +25,5 @@ module.exports = function(grunt) {
       // Kss prints the error itself, otherwise use grunt.log.error(error);
       done(false);
     });
-});
+  });
 };
