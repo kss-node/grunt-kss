@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     // Use promise to make sure done() is called when kss() ends
     Promise.all([kss(options)]).then(function() {
       done();
-    }).catch(error => {
+    }).catch(function() {
       // Kss prints the error itself, otherwise use grunt.log.error(error);
       done(false);
     });
