@@ -18,12 +18,11 @@ module.exports = function(grunt) {
       }
     });
 
-    // Call kss() to generate the style guide.
-    kss(options, function(error) {
-      if (error) {
-        grunt.log.error(error);
-      }
+    // Use promise to make sure done() is called when kss() ends
+    Promise.all([kss(options)]).then(function() {
       done();
+    }).catch(function(error) {
+      done(error);
     });
   });
 };
