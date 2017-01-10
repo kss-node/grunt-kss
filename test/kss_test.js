@@ -32,7 +32,7 @@ exports.kss = {
 
     var actual = grunt.file.read('test/output/section-1.html');
     var expected = grunt.file.read('test/expected/section-1.html');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    test.equal(actual, expected, 'should match expected generated styleguide result.');
 
     test.done();
   }
