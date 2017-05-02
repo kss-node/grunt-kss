@@ -1,5 +1,7 @@
 # grunt-kss
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kss-node/grunt-kss.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://secure.travis-ci.org/kss-node/grunt-kss.png?branch=master)](http://travis-ci.org/kss-node/grunt-kss/builds)
 [![NPM version](https://badge.fury.io/js/grunt-kss.png)](http://badge.fury.io/js/grunt-kss)
 
