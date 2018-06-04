@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "eslint": "^4.1.0",
-    "grunt": "~1.0.1",
+    "grunt": "~1.0.3",
     "grunt-cli": "~1.2.0",
     "grunt-contrib-clean": "~1.1.0",
     "grunt-contrib-nodeunit": "~1.0.0"
